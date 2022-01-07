@@ -22,6 +22,7 @@
     "packager": "node scripts/packager.js",
     "postinstall": "electron-rebuild",
     "start": "electron .",
+    "start1": "electron temp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "winsetup": "node scripts/winsetup.js"
   },

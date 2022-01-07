@@ -102,6 +102,10 @@ AbrWindow.prototype = {
             }
         };
 
+        //https://github.com/electron/electron/issues/20069#issuecomment-586642795
+        let devtools = new BrowserWindow()
+        win.webContents.setDevToolsWebContents(devtools.webContents)
+        win.webContents.openDevTools({ mode: 'detach' })
         // Set event handlers
         win.webContents.on("dom-ready", function () {
             execStartupCommands();
